@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">T3DataBinding</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+</resources>
