@@ -1,7 +1,9 @@
-package com.softwares.swamisamarth.t3databinding;
+package com.softwares.swamisamarth.t3databinding.views.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.softwares.swamisamarth.t3databinding.R;
 
 public class MainActivity extends AppCompatActivity {
 
