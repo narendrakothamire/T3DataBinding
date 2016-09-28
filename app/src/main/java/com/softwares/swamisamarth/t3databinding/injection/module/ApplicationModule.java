@@ -10,12 +10,14 @@ import org.greenrobot.eventbus.EventBus;
 
 import javax.inject.Singleton;
 
+import dagger.Module;
 import dagger.Provides;
 
 /**
  * Created by C145557 on 9/28/2016.
  */
 
+@Module
 public class ApplicationModule {
     protected final Application mApplication;
 
