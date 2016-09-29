@@ -1,4 +1,4 @@
-package com.softwares.swamisamarth.t3databinding.injection.module;
+package com.softwares.swamisamarth.t3databinding.injection;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

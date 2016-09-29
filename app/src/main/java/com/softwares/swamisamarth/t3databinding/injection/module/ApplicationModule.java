@@ -3,6 +3,7 @@ package com.softwares.swamisamarth.t3databinding.injection.module;
 import android.app.Application;
 import android.content.Context;
 
+import com.softwares.swamisamarth.t3databinding.data.DataManager;
 import com.softwares.swamisamarth.t3databinding.data.remote.WebService;
 import com.softwares.swamisamarth.t3databinding.injection.ApplicationContext;
 
@@ -19,6 +20,7 @@ import dagger.Provides;
 
 @Module
 public class ApplicationModule {
+
     protected final Application mApplication;
 
     public ApplicationModule(Application application) {
@@ -44,7 +46,13 @@ public class ApplicationModule {
 
     @Provides
     @Singleton
-    WebService provideRibotService() {
+    WebService provideWebService() {
         return WebService.WebServiceFactory.makeWebService(mApplication);
+    }
+
+    @Provides
+    @Singleton
+    DataManager providesDataManager(WebService webService, EventBus eventBus){
+        return new DataManager(webService, eventBus);
     }
 }

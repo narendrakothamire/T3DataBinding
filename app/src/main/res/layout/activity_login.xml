@@ -48,6 +48,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:hint="@string/username"
+                    android:text="@={viewModel.userName}"
                     app:font="@{`GlacialIndifference-Regular.otf`}" />
 
             </android.support.design.widget.TextInputLayout>
@@ -63,6 +64,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:text="@={viewModel.password}"
                     app:font="@{`GlacialIndifference-Regular.otf`}" />
 
             </android.support.design.widget.TextInputLayout>
@@ -74,9 +77,10 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="30dp"
-                android:background="@drawable/round_rect"
+                android:background="@drawable/button_bg"
                 android:gravity="center"
                 android:text="LOGIN"
+                android:onClick="@{() -> viewModel.performLogin()}"
                 android:textColor="@android:color/white"
                 app:font="@{`GlacialIndifference-Regular.otf`}" />
 
