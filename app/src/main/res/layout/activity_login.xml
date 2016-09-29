@@ -71,7 +71,7 @@
             </android.support.design.widget.TextInputLayout>
 
             <TextView
-                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                style="@android:style/TextAppearance.DeviceDefault.Large"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginLeft="30dp"
@@ -85,7 +85,7 @@
                 app:font="@{`GlacialIndifference-Regular.otf`}" />
 
             <TextView
-                style="@android:style/TextAppearance.DeviceDefault.Small"
+                style="@android:style/TextAppearance.DeviceDefault.Large"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="30dp"
