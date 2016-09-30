@@ -3,6 +3,7 @@ package com.softwares.swamisamarth.t3databinding.views.activities;
 import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 
 import com.softwares.swamisamarth.t3databinding.R;
 import com.softwares.swamisamarth.t3databinding.T3Application;
@@ -36,6 +37,7 @@ public class LoginActivity extends AppCompatActivity {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
         binding.setViewModel(new LoginViewModel(this, dataManager, eventBus));
+
     }
 
 

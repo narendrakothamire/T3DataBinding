@@ -14,7 +14,7 @@ public class BaseViewModel extends BaseObservable {
 
     @BindingAdapter("app:font")
     public static void setFont(TextView textView, String name){
-        name = "GeosansLight.ttf";
+        name = "MyriadPro-Regular.ttf";
         Typeface type = Typeface.createFromAsset(textView.getContext().getAssets(),"fonts/"+ name);
         textView.setTypeface(type);
     }

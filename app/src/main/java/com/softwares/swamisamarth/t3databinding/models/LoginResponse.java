@@ -8,10 +8,10 @@ import com.google.gson.annotations.SerializedName;
 
 public class LoginResponse {
 
-    @SerializedName("Body")
+    @SerializedName("ClientWireInfoResponseBody")
     private Body mBody;
 
-    @SerializedName("Head")
+    @SerializedName("ClientWireInfoResponseHead")
     private Head mHead;
 
     public Body getBody() {
