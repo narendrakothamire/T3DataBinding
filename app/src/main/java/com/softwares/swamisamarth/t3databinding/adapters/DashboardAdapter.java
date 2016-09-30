@@ -20,7 +20,6 @@ import java.util.ArrayList;
 
 public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.DashboardViewHolder> {
 
-    private Context context;
     private ArrayList<DashboardItem> dashboardItems;
     private LayoutInflater inflater;
     private final int SPAN_2 = 2;
@@ -28,7 +27,6 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
 
 
     public DashboardAdapter(Context context, ArrayList<DashboardItem> dashboardItems) {
-        this.context = context;
         this.dashboardItems = dashboardItems;
         inflater = LayoutInflater.from(context);
     }
