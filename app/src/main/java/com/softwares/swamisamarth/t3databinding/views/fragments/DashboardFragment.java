@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import com.softwares.swamisamarth.t3databinding.R;
 import com.softwares.swamisamarth.t3databinding.adapters.DashboardAdapter;
 import com.softwares.swamisamarth.t3databinding.models.DashboardItem;
+import com.softwares.swamisamarth.t3databinding.widgets.SpacesItemDecoration;
 
 import java.util.ArrayList;
 
@@ -51,11 +52,43 @@ public class DashboardFragment extends BaseFragment {
         });
 
         recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.addItemDecoration(new SpacesItemDecoration(10));
+        loadData();
         adapter = new DashboardAdapter(context, dashboardItems);
 
         recyclerView.setAdapter(adapter);
 
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+    }
+
+    public void loadData(){
+
+        DashboardItem dashboardItem0 = new DashboardItem("Conduct", R.color.colorPrimary);
+        DashboardItem dashboardItem1 = new DashboardItem("Product Information", R.color.colorAccent);
+        DashboardItem dashboardItem2 = new DashboardItem("Markets", R.color.colorPrimary);
+        DashboardItem dashboardItem3 = new DashboardItem("Wire", R.color.colorAccent);
+        DashboardItem dashboardItem4 = new DashboardItem("CRM", R.color.colorAccent);
+        DashboardItem dashboardItem5 = new DashboardItem("My Performance", R.color.colorPrimary);
+        DashboardItem dashboardItem6 = new DashboardItem("Markets calls & Alerts", R.color.colorAccent);
+        DashboardItem dashboardItem7 = new DashboardItem("Training", R.color.colorPrimary);
+
+        dashboardItems.add(dashboardItem0);
+        dashboardItems.add(dashboardItem1);
+        dashboardItems.add(dashboardItem2);
+        dashboardItems.add(dashboardItem3);
+        dashboardItems.add(dashboardItem4);
+        dashboardItems.add(dashboardItem5);
+        dashboardItems.add(dashboardItem6);
+        dashboardItems.add(dashboardItem7);
+
+       // adapter.notifyDataSetChanged();
+
     }
 
 }

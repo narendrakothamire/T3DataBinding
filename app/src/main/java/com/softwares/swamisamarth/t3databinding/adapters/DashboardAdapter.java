@@ -35,14 +35,22 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.Dash
     public DashboardViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
         ViewDataBinding viewDataBinding;
-        View view;
+
         if(viewType == SPAN_1){
-            view = inflater.inflate(R.layout.dashboard_item_1, parent, false);
+            viewDataBinding = DataBindingUtil.inflate(
+                    inflater,
+                    R.layout.dashboard_item_1,
+                    parent,
+                    false);
         }else {
-            view = inflater.inflate(R.layout.dashboard_item_2, parent, false);
+            viewDataBinding = DataBindingUtil.inflate(
+                    inflater,
+                    R.layout.dashboard_item_2,
+                    parent,
+                    false);
         }
 
-        viewDataBinding = DataBindingUtil.getBinding(view);
+     //   viewDataBinding = DataBindingUtil.getBinding(view);
         return new DashboardViewHolder(viewDataBinding);
     }
 
