@@ -23,6 +23,9 @@ public class SquareTextView extends TextView {
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(widthMeasureSpec, widthMeasureSpec);
+       // int parentHeight = MeasureSpec.getSize(heightMeasureSpec);
+        int parentHeight = getContext().getResources().getDisplayMetrics().heightPixels;
+        int myHeight = (parentHeight / 2) - 25;
+        super.onMeasure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(myHeight, MeasureSpec.EXACTLY));
     }
 }

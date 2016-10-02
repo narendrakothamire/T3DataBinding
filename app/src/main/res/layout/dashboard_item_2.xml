@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -8,22 +8,32 @@
             type="com.softwares.swamisamarth.t3databinding.models.DashboardItem" />
     </data>
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@{model.color}"
+        app:drawable="@{model.drawable}"
+        app:color="@{model.color}"
         android:orientation="vertical">
+
+        <TextView
+            android:padding="-10dp"
+            android:text="@{model.title}"
+            android:textColor="#80ffffff"
+            android:textSize="70sp"
+            android:maxLines="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimary"
             android:gravity="bottom|left"
             android:padding="10dp"
+            app:font="@{model.title}"
             android:text="@{model.title}"
             android:textColor="@android:color/white"
-            android:textSize="20sp" />
+            android:textSize="28sp" />
 
-    </LinearLayout>
+    </FrameLayout>
 
 </layout>

@@ -1,21 +1,26 @@
 package com.softwares.swamisamarth.t3databinding.models;
 
+import android.content.Context;
 import android.support.annotation.ColorInt;
+
+import com.softwares.swamisamarth.t3databinding.viewmodels.BaseViewModel;
 
 /**
  * Created by C145557 on 9/30/2016.
  */
 
-public class DashboardItem {
+public class DashboardItem{
 
     private String title;
-    private @ColorInt int color;
+    private int color;
+    private int drawable;
 
     public DashboardItem() {
     }
 
-    public DashboardItem(String title, int color) {
+    public DashboardItem(String title, int drawable, int color) {
         this.title = title;
+        this.drawable = drawable;
         this.color = color;
     }
 
@@ -34,4 +39,13 @@ public class DashboardItem {
     public void setTitle(String title) {
         this.title = title;
     }
+
+    public int getDrawable() {
+        return drawable;
+    }
+
+    public void setDrawable(int drawable) {
+        this.drawable = drawable;
+    }
+
 }

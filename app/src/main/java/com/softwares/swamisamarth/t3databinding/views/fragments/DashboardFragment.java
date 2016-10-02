@@ -52,7 +52,7 @@ public class DashboardFragment extends BaseFragment {
         });
 
         recyclerView.setLayoutManager(gridLayoutManager);
-        recyclerView.addItemDecoration(new SpacesItemDecoration(10));
+        recyclerView.addItemDecoration(new SpacesItemDecoration(5));
         loadData();
         adapter = new DashboardAdapter(context, dashboardItems);
 
@@ -69,14 +69,14 @@ public class DashboardFragment extends BaseFragment {
 
     public void loadData(){
 
-        DashboardItem dashboardItem0 = new DashboardItem("Conduct", R.color.colorPrimary);
-        DashboardItem dashboardItem1 = new DashboardItem("Product Information", R.color.colorAccent);
-        DashboardItem dashboardItem2 = new DashboardItem("Markets", R.color.colorPrimary);
-        DashboardItem dashboardItem3 = new DashboardItem("Wire", R.color.colorAccent);
-        DashboardItem dashboardItem4 = new DashboardItem("CRM", R.color.colorAccent);
-        DashboardItem dashboardItem5 = new DashboardItem("My Performance", R.color.colorPrimary);
-        DashboardItem dashboardItem6 = new DashboardItem("Markets calls & Alerts", R.color.colorAccent);
-        DashboardItem dashboardItem7 = new DashboardItem("Training", R.color.colorPrimary);
+        DashboardItem dashboardItem0 = new DashboardItem("Conduct", R.drawable.button_bg, R.color.colorAccent);
+        DashboardItem dashboardItem1 = new DashboardItem("Product Information", R.drawable.button_bg, R.color.light_green);
+        DashboardItem dashboardItem2 = new DashboardItem("Markets", R.drawable.button_bg, R.color.light_orange);
+        DashboardItem dashboardItem3 = new DashboardItem("Wire", R.drawable.button_bg, R.color.light_greenish_blue);
+        DashboardItem dashboardItem4 = new DashboardItem("CRM", R.drawable.button_bg, R.color.light_green);
+        DashboardItem dashboardItem5 = new DashboardItem("My Performance", R.drawable.button_bg, R.color.light_orange);
+        DashboardItem dashboardItem6 = new DashboardItem("Markets calls & Alerts", R.drawable.button_bg, R.color.colorAccent);
+        DashboardItem dashboardItem7 = new DashboardItem("Training", R.drawable.button_bg, R.color.light_greenish_blue);
 
         dashboardItems.add(dashboardItem0);
         dashboardItems.add(dashboardItem1);
